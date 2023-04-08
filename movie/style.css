@@ -1,0 +1,351 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+:root{
+  --path: #2f3545;
+  --dot: #5628ee;
+
+}
+nav{
+  padding: 1rem;
+  display: flex;
+  justify-content:space-between;
+  background-color: #fbee97;
+  border-radius: 25px;
+}
+nav a:hover{
+  color:rgb(242, 100, 100);
+}
+
+.logo img{
+  filter: invert(0);
+}
+.logo img:hover{
+  filter: invert(1);
+}
+body{
+  background-color: #adedd5;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  /* Variables */
+  margin: 12px;
+ --switch_width: 2em;
+ --switch_height: 1em;
+ --thumb_color: #e8e8e8;
+ --track_color: #e8e8e8;
+ --track_active_color: #888;
+ --outline_color: #000;
+ font-size: 17px;
+ position: relative;
+ display: inline-block;
+ width: var(--switch_width);
+ height: var(--switch_height);
+}
+.dark {
+  background: #333333;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ box-sizing: border-box;
+ border: 2px solid var(--outline_color);
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: var(--track_color);
+ transition: .15s;
+ border-radius: var(--switch_height);
+}
+
+.slider:before {
+ box-sizing: border-box;
+ position: absolute;
+ content: "";
+ height: var(--switch_height);
+ width: var(--switch_height);
+ border: 2px solid var(--outline_color);
+ border-radius: 100%;
+ left: -2px;
+ bottom: -2px;
+ background-color: var(--thumb_color);
+ transform: translateY(-0.2em);
+ box-shadow: 0 0.2em 0 var(--outline_color);
+ transition: .15s;
+}
+
+input:checked + .slider {
+ background-color: var(--track_active_color);
+}
+
+input:focus-visible + .slider {
+ box-shadow: 0 0 0 2px var(--track_active_color);
+}
+
+/* Raise thumb when hovered */
+input:hover + .slider:before {
+ transform: translateY(-0.3em);
+ box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+input:checked + .slider:before {
+ transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+}
+
+/* Raise thumb when hovered & checked */
+input:hover:checked + .slider:before {
+ transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+ box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+a{
+  padding-top: 13px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+main{
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+/* From uiverse.io by @alexruix */
+.card {
+  margin: 40px;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: black;
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+ }
+ 
+ .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+
+ 
+ /*Text*/
+ .text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+  cursor: pointer;
+ }
+
+ .card img{
+  
+      width: 100%;
+      height: 100%;
+ }
+
+
+ /* ******************************************************************************************************* */
+ .bottom{
+  display: flex;
+  justify-content: center;
+ }
+.loader {
+  /* --path: #2f3545; */
+  --dot: #5628ee;
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.loader:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  transform: translate(-18px, -18px);
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect, .loader svg polygon, .loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader.triangle {
+  width: 48px;
+}
+
+.loader.triangle:before {
+  left: 21px;
+  transform: translate(-10px, -18px);
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+
+  66% {
+    stroke-dashoffset: 147;
+  }
+
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+
+  66% {
+    transform: translate(10px, -18px);
+  }
+
+  100% {
+    transform: translate(-10px, -18px);
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -18px);
+  }
+
+  75% {
+    transform: translate(0, -36px);
+  }
+
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+
+  50% {
+    stroke-dashoffset: 175;
+  }
+
+  75% {
+    stroke-dashoffset: 225;
+  }
+
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+.loader {
+  display: inline-block;
+  margin: 0 16px;
+  cursor: pointer;
+}
+

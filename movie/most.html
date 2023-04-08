@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_forpage.css">
+    <title>Most Popular Movie</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+       
+        <!-- <form  id="form">
+               
+            <input type="text" id="search" class="search" placeholder="Search">
+        </form> -->
+        <div class="logo">
+        <a href="index.html"><img src="img/home.png" alt=""></a></div>
+        <form action="" id="form">
+        <input placeholder="Search your key word" type="text" class="input search"  id="search"  required=""></form>
+       
+        <div class="check">
+            <input  type="checkbox" id="toggle_checkbox">
+
+            <label for="toggle_checkbox">
+              <div id="star">
+                <div class="star" id="star-1">★</div>
+                <div class="star" id="star-2">★</div>
+              </div>
+              <div id="moon"></div>
+            </label>
+        </div>
+    </header>
+    <main id="main">
+        <div class="movie">
+            <img src="img/f1.png" alt="image">
+        
+            <!-- <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa nihil ea nulla veniam ut neque iusto accusamus, dolor beatae!
+            </div> -->
+        </div>
+        <div class="movie">
+            <img src="img/f2.png" alt="image">
+        
+            <!-- <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa nihil ea nulla veniam ut neque iusto accusamus, dolor beatae!
+            </div> -->
+        </div>
+        <div class="movie">
+            <img src="img/f3.png" alt="image">
+        
+            <!-- <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa nihil ea nulla veniam ut neque iusto accusamus, dolor beatae!
+            </div> -->
+        </div>
+    </main>
+    <div class="bottom">
+    <div class="loader">
+        <div class="scanner">
+          <h1>Loading...</h1>
+        </div>
+      </div></div>
+    <script src="most.js"></script>
+</body>
+
+<script>
+    var r = document.querySelector(':root');
+     const btn = document.getElementById('toggle_checkbox')
+    // console.log(btn)
+const body = document.body
+
+function change(){
+    // console.log("something...")
+  btn.checked ? body.classList.add("dark")& r.style.setProperty('--bot', '#03a9f4')& r.style.setProperty('--line', '#fff') : body.classList.remove("dark")& r.style.setProperty('--bot', '#121212')&& r.style.setProperty('--line', '#17FEFF')
+  
+}
+
+btn.addEventListener('change', change)
+</script>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/l.png"   width="50" height="50" ALT="align box"  ALIGN=CENTER alt="">
+        </div>
+        <a href="/index.html">Home</a>
+        <a href="https://github.com/pranjal6314">Contact</a>
+        <a href="https://github.com/pranjal6314">GitHub</a>
+        <label  id="switch" class="switch">
+            <input id="checkbox" type="checkbox">
+            <span class="slider"></span>
+          </label>
+    </nav>
+    <main>
+
+        
+        <div class="card">
+            <div class="card-details">
+                <img src="img/most.png" alt="">
+              <p class="text-title"> Most Popular Movies</p>
+             
+            </div>
+            <button class="card-button"><a href="most.html">Click Here</a></button>
+        </div> 
+
+        <div class="card">
+            <div class="card-details">
+                <img src="img/kids.png" alt="">
+              <p class="text-title"> Kids Movies</p>
+            </div>
+            <button class="card-button"><a href="kids.html">Click Here</a></button>
+        </div> 
+          
+        <div class="card">
+            <div class="card-details">
+                <img src="img/Tom Cruise.jpg" alt="">
+              <p class="text-title">Tom Cruise's Movies</p>
+            </div>
+            <button class="card-button"><a href="Tom_Cruise.html">Click Here</a></button>
+        </div>
+
+        <div class="card">
+            <div class="card-details">
+                <img src="img/comedy.png" alt="">
+              <p class="text-title">Comedy Movies</p>
+            </div>
+            <button class="card-button"><a href="comedy.html">Click Here</a></button>
+        </div>
+
+        <div class="card">
+            <div class="card-details">
+                <img src="img/rated.png" alt="">
+              <p class="text-title">Highest Rated Movies</p>
+            </div>
+            <button class="card-button"><a href="highest_rated.html">Click Here</a></button>
+        </div>
+
+        </main>
+    <footer>
+            <div class="bottom">
+                <div  class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <circle  id="test " cx="40" cy="40" r="32"></circle>
+                    </svg>
+                </div>
+                
+                <div id="foot" class="loader triangle">
+                    <svg viewBox="0 0 86 80">
+                        <polygon points="43 8 79 72 7 72"></polygon>
+                    </svg>
+                </div>
+                
+                <div class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <rect x="8" y="8" width="64" height="64"></rect>
+                    </svg>
+                </div>   
+            </div>
+</footer>
+
+</body>
+<script>
+     const btn = document.getElementById('checkbox')
+    // console.log(btn)
+const body = document.body
+var r = document.querySelector(':root');
+function change(){
+    // console.log("something...")
+  btn.checked ? body.classList.add("dark")& r.style.setProperty('--path', '#00ffcc') : body.classList.remove("dark")& r.style.setProperty('--path', '#2f3545');
+}
+
+btn.addEventListener('change', change)
+//scroll to top
+const foot=document.getElementById('foot');
+function scroll(){
+    // console.log('scroll')
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+   }
+foot.addEventListener('mouseover',scroll)
+
+
+</script>
+</html>
