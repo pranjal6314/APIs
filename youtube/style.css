@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    
+    background-color: aqua;
+    border: 5px solid #FFFF00;
+display: flex;
+justify-content: center;
+padding: 50px 0;
+
+}
+.log{
+    width: 400px;
+}
+.btn{
+    margin: 8px 11px 27px 7px;
+}
+input{
+    margin-top: 5px;
+}
+input[type=text] {
+    width: 70%;
+    border: none;
+    border-bottom: 0.5px solid black;
+  }
+#content{
+    background-color: rgb(254, 225, 181);
+    padding: 10px;
+   
+}
+
+
+
+
+  /* **********************************************************************88888 */
+
+ /* #content, .input-field,#auth-btn,#sighnout {display: none} */
