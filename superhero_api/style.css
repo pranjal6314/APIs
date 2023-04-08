@@ -1,0 +1,13 @@
+
+*{
+    margin: auto;
+}
+body{
+    background-color: aquamarine;
+    width: 50%;
+}
+.main{
+    margin-top: 50px;
+    background-color: aliceblue;
+    height: 100%;
+}
